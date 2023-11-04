@@ -3994,6 +3994,7 @@ GameObject:
   - component: {fileID: 1441433692}
   - component: {fileID: 1441433691}
   - component: {fileID: 1441433690}
+  - component: {fileID: 1441433693}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -4114,6 +4115,19 @@ Transform:
   - {fileID: 1369473870}
   m_Father: {fileID: 1908983864}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441433693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441433689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b3ea81294275b43aa1a95f0d4665b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: Level 1
 --- !u!1 &1463557429
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,7 +5468,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!70 &1846346591
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
