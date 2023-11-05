@@ -10,15 +10,11 @@ public class CharacterController : MonoBehaviour
     private bool _right = false;
     private bool _left = false;
     private bool _jump = false;
-
-
-    private void Start()
-    {
-        gameObject.transform.localScale = new Vector3(ValueController.Instance.Scale, ValueController.Instance.Scale, 1);
-    }
-
+    
     private void Update()
     {
+        gameObject.transform.localScale = new Vector3(ValueController.Instance.Scale, ValueController.Instance.Scale, 1);
+        
         if (_right)
             gameObject.transform.Translate(Vector3.right * ValueController.Instance.Speed * Time.deltaTime);
         if (_left)
