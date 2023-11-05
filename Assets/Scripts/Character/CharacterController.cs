@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    
-    [SerializeField] private float _speed;
-    [SerializeField] private float _jumpForce;
     [SerializeField] private Rigidbody2D _rb;
 
     private bool _right = false;
@@ -17,25 +14,24 @@ public class CharacterController : MonoBehaviour
     private void Update()
     {
         if (_right)
-            gameObject.transform.Translate(Vector3.right * _speed * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.right * ValueController.Instance.Speed * Time.deltaTime);
         if (_left)
-            gameObject.transform.Translate(Vector3.left * _speed * Time.deltaTime);
+            gameObject.transform.Translate(Vector3.left * ValueController.Instance.Speed * Time.deltaTime);
     }
     public void Jump()
     {
         if (_jump)
         {
-            _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            _rb.AddForce(Vector2.up * ValueController.Instance.JumpForce, ForceMode2D.Impulse);
             _jump = false;
         }
     }
     
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<Ground>())
+        if (other.gameObject.GetComponent<Ground>()) //String maliyetli olabileceğinden script kullanmayı tercih ediyorum.
         {
             _jump = true;
-            Debug.Log(other.gameObject.name);
         }
     }
     
