@@ -1,10 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class MoveSpeedSliderController : MonoBehaviour
+public class JumpSliderController : MonoBehaviour
 {
     private Slider _slider;
     private void Awake()
@@ -14,11 +12,11 @@ public class MoveSpeedSliderController : MonoBehaviour
 
     private void Update()
     {
-        ValueController.Instance.Speed = _slider.value;
+        ValueController.Instance.JumpForce = _slider.value;
     }
 
     private void Start()
     {
-        _slider.value = ValueController.Instance.Speed;
+        _slider.value = ValueController.Instance.JumpForce;
     }
 }

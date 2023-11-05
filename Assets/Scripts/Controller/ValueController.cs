@@ -9,6 +9,7 @@ public class ValueController : MonoBehaviour
 {
     [Range(4f,15f)] public float Speed;
     [Range(3f,15f)] public float JumpForce;
+    [Range(.25f,3f)] public float Scale;
     
     
     
