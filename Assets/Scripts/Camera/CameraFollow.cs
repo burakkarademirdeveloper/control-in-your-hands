@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -8,6 +6,11 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float _smoothSpeed;
     
     void LateUpdate()
+    {
+        FollowCamera();
+    }
+
+    private void FollowCamera()
     {
         if (_capsule != null)
         {

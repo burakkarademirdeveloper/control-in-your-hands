@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class ValueController : MonoBehaviour
@@ -12,9 +7,7 @@ public class ValueController : MonoBehaviour
     [Range(.25f,3f)] public float Scale;
     
     
-    
-    
-    public static ValueController Instance;
+    public static ValueController Instance; //Singleton
 
     private void Awake()
     {

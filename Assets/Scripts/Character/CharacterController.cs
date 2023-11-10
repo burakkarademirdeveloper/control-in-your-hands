@@ -13,12 +13,7 @@ public class CharacterController : MonoBehaviour
     
     private void Update()
     {
-        gameObject.transform.localScale = new Vector3(ValueController.Instance.Scale, ValueController.Instance.Scale, 1);
-        
-        if (_right)
-            gameObject.transform.Translate(Vector3.right * ValueController.Instance.Speed * Time.deltaTime);
-        if (_left)
-            gameObject.transform.Translate(Vector3.left * ValueController.Instance.Speed * Time.deltaTime);
+        MoveControl();
     }
     public void Jump()
     {
@@ -41,4 +36,14 @@ public class CharacterController : MonoBehaviour
     public void MoveLeft() => _left = true;
     public void StopMoveRight() => _right = false;
     public void StopMoveLeft() => _left = false;
+
+    private void MoveControl()
+    {
+        gameObject.transform.localScale = new Vector3(ValueController.Instance.Scale, ValueController.Instance.Scale, 1);
+        
+        if (_right)
+            gameObject.transform.Translate(Vector3.right * ValueController.Instance.Speed * Time.deltaTime);
+        if (_left)
+            gameObject.transform.Translate(Vector3.left * ValueController.Instance.Speed * Time.deltaTime);
+    }
 }
